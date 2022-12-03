@@ -8,55 +8,32 @@ class implemented.
 ### Functions that are implemented:
 
 #### Constructors
-
-● Default constructor
-
-● Parameterized constructor ()
-
-● Copy constructor
+- Default constructor
+- Parameterized constructor ()
+- Copy constructor
 
 #### Functions that replace operators
-
-● operatorCopyAssignment
-
-● operatorMoveAssignment
-
-● toString
-
-● operatorEqualTo
-
-● operatorNotEqualTo
-
-● operatorPlus, operatorAdditionAssignment
-
-● operatorLesserThan, operatorLesserThanEqualTo, operatorGreaterThan, operatorGreaterThanEqualTo
+- operatorCopyAssignment
+- operatorMoveAssignment
+- toString
+- operatorEqualTo
+- operatorNotEqualTo
+- operatorPlus, operatorAdditionAssignment
+- operatorLesserThan, operatorLesserThanEqualTo, operatorGreaterThan, operatorGreaterThanEqualTo
 
 #### Functions
 
-● at ()
-
-● front (), back ()
-
-● empty ()
-
-● size ()
-
-● capacity ()
-
-● empty ()
-
-● reserve ()
-
-● shrink_to_fit ()
-
-● insert ()
-
-● push_back ()
-
-● pop_back ()
-
-● erase ()
-
-● resize (), with 1 and 2 parameters
-
-● emplace ()
+- at ()
+- front (), back ()
+- empty ()
+- size ()
+- capacity ()
+- empty ()
+- reserve ()
+- shrink_to_fit ()
+- insert ()
+- push_back ()
+- pop_back ()
+- erase ()
+- resize (), with 1 and 2 parameters
+- emplace ()
