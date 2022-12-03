@@ -93,7 +93,7 @@ public class Vector<T> implements Iterable<T> {
         }
     }
 
-    public boolean operatorLesser(Vector<T> vector) {
+    public boolean operatorLesserThan(Vector<T> vector) {
         if (this.empty() && vector.empty()) {
             return false;
         }
@@ -111,51 +111,38 @@ public class Vector<T> implements Iterable<T> {
             return true;
         }
 
-        if (!(this.at(0) instanceof Comparable)) {
-            throw new VectorsNotComparableException("Vectors of this type aren't comparable");
-        }
-
-        System.out.println();
-        System.out.println(String.class);
-
-        if (array.getClass().toString().equals(String.class.toString())) {
-            for (int i = 0; i < this.size; ++i) {
-                if ((this.at(i).toString()).compareTo((vector.at(i)).toString()) >= 0) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        if (array.getClass().toString().equals(Character.class.toString())) {
-            for (int i = 0; i < this.size; ++i) {
-                if ((this.at(i).hashCode() >= (vector.at(i).hashCode()))) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
         for (int i = 0; i < this.size; ++i) {
-            if (Integer.parseInt(this.at(i).toString()) >= Integer.parseInt(((vector.at(i)).toString()))) {
-                System.out.println("This: " + this.at(i));
-                System.out.println("Vector: " + this.at(i));
-                return false;
+            if (this.at(i) instanceof Comparable item) {
+                if (item.compareTo(vector.at(i)) >= 0) {
+                    return false;
+                }
+            } else {
+                throw new VectorsNotComparableException("Vectors of this type aren't comparable");
             }
         }
-
         return true;
     }
 
+    public boolean operatorLesserThanEqualTo(Vector<T> vector) {
+        return operatorLesserThan(vector) || operatorEquals(vector);
+    }
+
+    public boolean operatorGreaterThan(Vector<T> vector) {
+        return !operatorLesserThanEqualTo(vector);
+    }
+
+
+    public boolean operatorGreaterThanEqualTo(Vector<T> vector) {
+        return !operatorLesserThan(vector);
+    }
+
     T at(int position) {
+        if (this.empty()) {
+            throw new VectorIndexOutOfBoundsException("Vector is empty");
+        }
         if (position > size) {
             throw new VectorIndexOutOfBoundsException(size);
         }
-//        if (array[position] == null) {
-//            throw new VectorIndexOutOfBoundsException("Vector element at " + position + " out of range");
-//        }
 
         return array[position];
     }
