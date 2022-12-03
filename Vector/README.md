@@ -1,13 +1,13 @@
 # Lab-Projects
 
-Dynamic array implementation like std::vector with Java
+## Dynamic array implementation like std::vector with Java
 
-The elements in the data structure must be of type T (template). And it must have an iterator
+The elements in the class are of type T (generic). And it has an iterator
 class implemented.
 
-Functions that must be implemented:
+### Functions that are implemented:
 
-Constructors
+#### Constructors
 
 ● Default constructor
 
@@ -15,15 +15,13 @@ Constructors
 
 ● Copy constructor
 
+#### Functions that replace operators
 
-Operator Functions
-● operatoCopyassignment
+● operatorCopyAssignment
 
-● operatorMopyassignment
+● operatorMoveAssignment
 
 ● toString
-
-● Operator subscript [ ] (two overloaded, with const and non-const)
 
 ● operatorEqualTo
 
@@ -33,7 +31,7 @@ Operator Functions
 
 ● operatorLesserThan, operatorLesserThanEqualTo, operatorGreaterThan, operatorGreaterThanEqualTo
 
-Functions
+#### Functions
 
 ● at ()
 
@@ -61,4 +59,4 @@ Functions
 
 ● resize (), with 1 and 2 parameters
 
-● emplace ()?
+● emplace ()
